@@ -350,6 +350,13 @@ button:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn-secondary {
+    width: auto;
+  }
 }
 
 .btn-secondary:hover {
@@ -361,14 +368,16 @@ button:hover {
   display: flex;
   gap: 10px;
   align-items: center;
-  height: 40px;
+  height: auto;
   width: 100%;
-  justify-content: center;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
   #user-info {
     width: auto;
+    flex-direction: row;
+    height: 40px;
   }
 }
 
@@ -382,13 +391,13 @@ button:hover {
   height: 40px;
   display: inline-flex;
   align-items: center;
-  flex: 1;
   justify-content: center;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   #username-display {
-    flex: 0;
+    width: auto;
   }
 }
 
