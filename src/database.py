@@ -2,11 +2,12 @@
 Database models and configuration for PostgreSQL
 """
 
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime, Enum
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime
 import os
+import enum
 
 # Database connection URL
 DATABASE_URL = os.getenv(
@@ -22,6 +23,24 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Base class for models
 Base = declarative_base()
+
+
+class UserRole(enum.Enum):
+    """User roles enum"""
+    STUDENT = "student"
+    TEACHER = "teacher"
+
+
+class User(Base):
+    """User model - represents a student or teacher"""
+    __tablename__ = "users"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String(50), unique=True, nullable=False, index=True)
+    email = Column(String(255), unique=True, nullable=False, index=True)
+    password_hash = Column(String(255), nullable=False)
+    role = Column(Enum(UserRole), nullable=False, default=UserRole.STUDENT)
+    created_at = Column(DateTime, default=datetime.utcnow)
 
 
 class Activity(Base):
