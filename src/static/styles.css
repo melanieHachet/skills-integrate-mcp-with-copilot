@@ -343,7 +343,8 @@ button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 500;
   transition: background-color 0.2s;
   height: 40px;
   display: inline-flex;
@@ -374,6 +375,7 @@ button:hover {
 #username-display {
   color: white;
   font-weight: 500;
+  font-size: 14px;
   padding: 8px 12px;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 5px;
@@ -388,8 +390,6 @@ button:hover {
   #username-display {
     flex: 0;
   }
-}
-  font-size: 14px;
 }
 
 footer {
