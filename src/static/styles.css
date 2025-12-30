@@ -24,23 +24,67 @@ header {
   border-radius: 5px;
 }
 
+header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+header > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  header > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header > div > div:first-child {
+    text-align: left;
+  }
+  
+  header > div > div:last-child {
+    flex-direction: row;
+    width: auto;
+    max-width: none;
+  }
+}
+
 .api-docs-btn {
   display: inline-block;
-  margin-top: 15px;
   padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #333;
+  background-color: transparent;
+  color: white;
   text-decoration: none;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid white;
+  border: 2px solid white;
   transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .api-docs-btn {
+    width: auto;
+  }
 }
 
 .api-docs-btn:hover {
-  background-color: white;
-  color: #1a237e;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 header h1 {
@@ -207,8 +251,153 @@ button:hover {
   border: 1px solid #bee5eb;
 }
 
+.info-message {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
 .hidden {
   display: none;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal:not(.hidden) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: white;
+  color: #1a237e;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    width: auto;
+  }
+}
+
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-secondary {
+  background-color: #d32f2f;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn-secondary {
+    width: auto;
+  }
+}
+
+.btn-secondary:hover {
+  background-color: #c62828;
+}
+
+/* User Info */
+#user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  #user-info {
+    width: auto;
+    flex-direction: row;
+    height: 40px;
+  }
+}
+
+#username-display {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #username-display {
+    width: auto;
+  }
 }
 
 footer {
@@ -217,3 +406,4 @@ footer {
   padding: 20px;
   color: #666;
 }
+
