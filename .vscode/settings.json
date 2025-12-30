@@ -1,0 +1,13 @@
+{
+  "vscode-postgres.connections": [
+    {
+      "name": "School Database",
+      "host": "localhost",
+      "port": 5432,
+      "user": "school",
+      "password": "school123",
+      "database": "schooldb",
+      "ssl": false
+    }
+  ]
+}

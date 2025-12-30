@@ -11,7 +11,7 @@ from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 import os
 from pathlib import Path
-from database import get_db, Activity, Participant
+from src.database import get_db, Activity, Participant
 
 app = FastAPI(title="Mergington High School API",
               description="API for viewing and signing up for extracurricular activities")
