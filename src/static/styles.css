@@ -24,9 +24,42 @@ header {
   border-radius: 5px;
 }
 
+header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+header > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  header > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header > div > div:first-child {
+    text-align: left;
+  }
+  
+  header > div > div:last-child {
+    flex-direction: row;
+    width: auto;
+    max-width: none;
+  }
+}
+
 .api-docs-btn {
   display: inline-block;
-  margin-top: 15px;
   padding: 8px 16px;
   background-color: rgba(255, 255, 255, 0.95);
   color: #333;
@@ -36,6 +69,18 @@ header {
   font-weight: 500;
   border: 1px solid white;
   transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .api-docs-btn {
+    width: auto;
+  }
 }
 
 .api-docs-btn:hover {
@@ -278,6 +323,13 @@ button:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    width: auto;
+  }
 }
 
 .btn-primary:hover {
