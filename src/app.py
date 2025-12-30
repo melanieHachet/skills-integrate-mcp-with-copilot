@@ -80,6 +80,18 @@ activities = {
         "schedule": "Mondays and Thursdays, 3:30 PM - 5:00 PM",
         "max_participants": 25,
         "participants": []
+    },
+    "Rock Climbing": {
+        "description": "Learn climbing techniques, safety, and challenge yourself on indoor climbing walls",
+        "schedule": "Wednesdays, 3:30 PM - 5:30 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Hiking": {
+        "description": "Explore local trails, build endurance, and enjoy nature with guided hiking trips",
+        "schedule": "Saturdays, 9:00 AM - 1:00 PM",
+        "max_participants": 20,
+        "participants": []
     }
 }
 
