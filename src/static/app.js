@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentUser && currentUser.role === 'teacher') {
       loginBtn.style.display = 'none';
       userInfo.style.display = 'flex';
-      usernameDisplay.textContent = `👤 ${currentUser.username}`;
+      usernameDisplay.textContent = currentUser.username;
       document.querySelectorAll('.teacher-only').forEach(el => el.classList.remove('hidden'));
       document.querySelectorAll('.delete-btn').forEach(btn => btn.style.display = 'inline');
     } else {
