@@ -8,10 +8,41 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
-      <a href="/docs" target="_blank" class="api-docs-btn">🚀 API Documentation</a>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="/docs" target="_blank" class="api-docs-btn">🚀 API Documentation</a>
+          <div id="user-info" class="hidden">
+            <span id="username-display"></span>
+            <button id="logout-btn" class="btn-secondary">Logout</button>
+          </div>
+          <button id="login-btn" class="btn-primary">Login</button>
+        </div>
+      </div>
     </header>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Teacher Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required placeholder="prof.martin" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+          <div id="login-error" class="error hidden"></div>
+        </form>
+      </div>
+    </div>
 
     <main>
       <section id="activities-container">
@@ -22,8 +53,9 @@
         </div>
       </section>
 
-      <section id="signup-container">
+      <section id="signup-container" class="teacher-only hidden">
         <h3>Sign Up for an Activity</h3>
+        <p class="info-message">Teachers can enroll students in activities</p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
