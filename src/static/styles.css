@@ -17,11 +17,30 @@ body {
 
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+.api-docs-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid white;
+  transition: all 0.2s ease;
+}
+
+.api-docs-btn:hover {
+  background-color: white;
+  color: #1a237e;
 }
 
 header h1 {
