@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const usernameDisplay = document.getElementById("username-display");
   const loginError = document.getElementById("login-error");
 
+  // Initialize UI as logged out by default
+  updateUIForAuth();
+
   // Initialize auth state
   checkAuthState();
 
