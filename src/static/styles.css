@@ -274,6 +274,10 @@ button:hover {
   font-size: 14px;
   font-weight: 500;
   transition: background-color 0.2s;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary:hover {
@@ -289,6 +293,10 @@ button:hover {
   cursor: pointer;
   font-size: 13px;
   transition: background-color 0.2s;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-secondary:hover {
@@ -300,6 +308,7 @@ button:hover {
   display: flex;
   gap: 10px;
   align-items: center;
+  height: 40px;
 }
 
 #username-display {
@@ -308,6 +317,10 @@ button:hover {
   padding: 8px 12px;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 5px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+}
   font-size: 14px;
 }
 
