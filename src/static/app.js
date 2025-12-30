@@ -109,14 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Update UI based on auth state
   function updateUIForAuth() {
     if (currentUser && currentUser.role === 'teacher') {
-      loginBtn.classList.add("hidden");
-      userInfo.classList.remove("hidden");
+      loginBtn.style.display = 'none';
+      userInfo.style.display = 'flex';
       usernameDisplay.textContent = `👤 ${currentUser.username}`;
       document.querySelectorAll('.teacher-only').forEach(el => el.classList.remove('hidden'));
       document.querySelectorAll('.delete-btn').forEach(btn => btn.style.display = 'inline');
     } else {
-      loginBtn.classList.remove("hidden");
-      userInfo.classList.add("hidden");
+      loginBtn.style.display = 'inline-block';
+      userInfo.style.display = 'none';
       document.querySelectorAll('.teacher-only').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.delete-btn').forEach(btn => btn.style.display = 'none');
     }
