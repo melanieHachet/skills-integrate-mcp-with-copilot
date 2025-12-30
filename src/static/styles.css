@@ -361,6 +361,14 @@ button:hover {
   gap: 10px;
   align-items: center;
   height: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  #user-info {
+    width: auto;
+  }
 }
 
 #username-display {
@@ -372,6 +380,14 @@ button:hover {
   height: 40px;
   display: inline-flex;
   align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  #username-display {
+    flex: 0;
+  }
 }
   font-size: 14px;
 }
