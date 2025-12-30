@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           // Token invalid
           authToken = null;
+          currentUser = null;
           localStorage.removeItem('authToken');
           updateUIForAuth();
         }
